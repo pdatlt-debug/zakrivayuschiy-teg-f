@@ -6,35 +6,40 @@
   color: var(--text-color);
   background-image: var(--background-image);
   background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
 }
 
 /* Шапка сайта */
 .header {
+  display: flex;
+  justify-content: center;
   padding: 0 16px;
 }
 
 .site-header__inner {
   border: 2px solid var(--text-color);
   background-color: var(--background-color);
-  width: 100%;
-  max-width: var(--width);
+  inline-size: clamp(23.188rem, 16.035rem + 30.516vw, 43.5rem);
   margin-inline: auto;
   display: grid;
   justify-items: center;
-  gap: 20px;
   padding: clamp(7.5rem, 7.125rem + 1.5625vw, 8.5rem) 25px;
+  gap: 20px;
 }
 
 .site-header__logo {
-  font-family: var(--additional-font, sans-serif);
+  font-family: var(--additional-font, fantasy);
   font-size: clamp(3.0625rem, 2.6875rem + 1.5625vw, 4.0625rem);
   text-transform: uppercase;
+  text-align: center;
 }
 
 .site-header__title {
-  font-family: var(--additional-font, sans-serif);
+  font-family: var(--additional-font, fantasy);
   font-size: clamp(0.875rem, 0.75rem + 0.78125vw, 1.438rem);
   text-transform: uppercase;
+  text-align: center;
 }
 
 /* Секция с основным контентом */
@@ -43,10 +48,10 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 100px;
+  margin-top: 90px;
 }
 
-.item-head {
+.section {
   width: var(--width);
   display: grid;
   gap: 50px;
@@ -63,6 +68,7 @@
 .item-title {
   line-height: normal;
   font-size: 18px;
+  font-variation-settings: "wght" 715;
   padding: 6px 10px;
 }
 
@@ -79,7 +85,7 @@
   text-shadow: 0 0 1px var(--background-color);
   font-size: 14px;
   position: absolute;
-  font-family: var(--additional-font, sans-serif);
+  font-family: var(--additional-font, fantasy);
   font-weight: 400;
   color: var(--text-color);
   mix-blend-mode: hard-light;
@@ -91,7 +97,6 @@
     text-shadow: none;
     -webkit-text-stroke: 1px var(--background-color);
     text-stroke: 1px var(--background-color);
-    mix-blend-mode: hard-light;
   }
 }
 
@@ -103,6 +108,7 @@
 .item-image {
   width: 100%;
   object-fit: cover;
+  object-position: center;
 }
 
 /* Текстовый блок карточки */
@@ -117,7 +123,9 @@
 
 .item-text {
   line-height: 21px;
-  font-variation-settings: "wght" var(--one-font-weight);
+  font-family: var(--site-font, sans-serif);
+  font-variation-settings: "wght" 410;
+  font-size: 18px;
 }
 
 /* Секция с кнопками в карточке */
@@ -135,6 +143,7 @@
 }
 
 /* Кнопки */
+
 .button {
   position: relative;
   background: var(--background-color);
@@ -147,15 +156,7 @@
   transition: box-shadow 0.3s ease;
 }
 
-.button::after {
-  content: "";
-  position: absolute;
-  display: block;
-  mix-blend-mode: difference;
-  color: var(--site-background-color);
-}
-
-.button:hover::after {
+.button:hover::before {
   color: var(--site-text-color);
 }
 
@@ -183,12 +184,13 @@
 }
 
 .button__text {
-  font-family: var(--additional-font, sans-serif);
+  font-family: var(--additional-font, fantasy);
   color: var(--site-text-color);
   font-size: 14px;
   mix-blend-mode: difference;
   position: relative;
   z-index: 1;
+  mix-blend-mode: difference;
 }
 
 .button-text.form-button-text {
@@ -250,8 +252,8 @@
 }
 
 .footer-text {
-  font-family: var(--additional-font, sans-serif);
-  font-weight: var(--one-font-weight);
+  font-family: var(--additional-font, fantasy);
+  font-weight: var(--font-weight);
   font-size: 14px;
 }
 
@@ -280,7 +282,7 @@
 
 .icon-text {
   color: var(--text-color);
-  font-family: var(--additional-font, sans-serif);
+  font-family: var(--additional-font, fantasy);
   font-size: 16px;
   line-height: 20px;
   text-transform: uppercase;
@@ -295,11 +297,25 @@
 }
 
 .dialog-button-text {
-  font-family: var(--additional-font, sans-serif);
-  background: var(--background-color);
+  font-family: var(--additional-font, fantasy);
   text-transform: uppercase;
   font-size: 16px;
-  color: var(--text-color);
+  color: #fff;
   display: flex;
   justify-content: center;
+}
+
+@media (width <= 376px) {
+  .header {
+    margin-bottom: 100px;
+  }
+
+  .footer-button {
+    flex-direction: column;
+  }
+
+  .footer-image {
+    width: 28px;
+    height: 28px;
+  }
 }
