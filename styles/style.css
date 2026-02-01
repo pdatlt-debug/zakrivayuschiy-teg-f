@@ -306,36 +306,36 @@
   justify-content: center;
 }
 
-.item:nth-of-type(1) .item-image {
-  filter: grayscale(0.4);
+.filter_grayscale {
+  filter: grayscale(10%);
 }
 
-.item:nth-of-type(2) .item-image {
-  filter: saturate(0.7);
+.filter_opacity {
+  filter: opacity(1);
 }
 
-.item:nth-of-type(3) .item-image {
-  filter: brightness(0.8);
+.filter_brightness {
+  filter: brightness(1.05);
 }
 
-.item:nth-of-type(4) .item-image {
-  filter: sepia(0.5);
+.filter_invert {
+  filter: invert(0.1);
 }
 
-.item:nth-of-type(5) .item-image {
-  filter: opacity(0.5);
+.filter_blur {
+  filter: sepia(0.3);  
 }
 
-.item:nth-of-type(6) .item-image {
-  filter: blur(1px);
+.filter_sepia {
+  filter: blur(0.2rem);
 }
 
-.item:nth-of-type(7) .item-image {
-  filter: contrast(1.1);
-}
-
-.item:nth-of-type(8) .item-image {
+.filter_hue-rotate {
   filter: hue-rotate(20deg);
+}
+
+.filter_contrast {
+  filter: contrast(1.05);
 }
 
 @media (width <= 376px) {
