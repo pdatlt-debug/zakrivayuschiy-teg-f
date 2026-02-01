@@ -1,6 +1,6 @@
-
 :root {
-    --background-image:repeating-linear-gradient(
+  --background-image:
+    repeating-linear-gradient(
       to right,
       var(--gradient-color-one) 0 2px,
       transparent 2px 4px
@@ -15,18 +15,16 @@
       var(--gradient-color-two) 0.01%,
       var(--gradient-color-three)
     );
-    --gradient-color-one: #d3d3d3;
-    --gradient-color-two: #e7e7e7;
-    --gradient-color-three: #1a1a1a;
-    --site-font: 'Inter-Variable';
-    --additional-font: 'PressStart2P';
-    --font-weight: 400;
-    --width: clamp(23.188rem, 16.035rem + 30.516vw, 43.5rem);
-    --background-color: #FFF;
-    --text-color: #000;
-    --site-text-color: #fff;
-    --site-background-color: #fff;
-    --core-color: #ff0000;
+  --gradient-color-one: #d3d3d3;
+  --gradient-color-two: #e7e7e7;
+  --gradient-color-three: #1a1a1a;
+  --site-font: "Inter-Variable";
+  --additional-font: "PressStart2P";
+  --font-weight: 400;
+  --width: clamp(23.188rem, 16.035rem + 30.516vw, 43.5rem);
+  --background-color: #fff;
+  --text-color: #000;
+  --site-text-color: #fff;
+  --site-background-color: #fff;
+  --core-color: #ff0000;
 }
-
-
